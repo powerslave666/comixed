@@ -81,25 +81,25 @@ export class DuplicatesPageToolbarComponent implements OnInit, OnDestroy {
     this.showPagesOptions = [
       {
         label: this.translateService.instant(
-          'duplicates-page.options.page-count.10-pages'
+          'duplicates-page.options.page-count.10-page'
         ),
         value: 10
       },
       {
         label: this.translateService.instant(
-          'duplicates-page.options.page-count.25-pages'
+          'duplicates-page.options.page-count.25-page'
         ),
         value: 25
       },
       {
         label: this.translateService.instant(
-          'duplicates-page.options.page-count.50-pages'
+          'duplicates-page.options.page-count.50-page'
         ),
         value: 50
       },
       {
         label: this.translateService.instant(
-          'duplicates-page.options.page-count.100-pages'
+          'duplicates-page.options.page-count.100-page'
         ),
         value: 100
       }

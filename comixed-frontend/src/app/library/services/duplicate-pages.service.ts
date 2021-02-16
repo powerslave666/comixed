@@ -37,7 +37,7 @@ export class DuplicatePagesService {
   constructor(private http: HttpClient, private logger: LoggerService) {}
 
   getAll(): Observable<any> {
-    this.logger.debug('[GET] http request getting all duplicate pages');
+    this.logger.debug('[GET] http request getting all duplicate page');
     return this.http.get(interpolate(GET_ALL_DUPLICATE_PAGES_URL));
   }
 

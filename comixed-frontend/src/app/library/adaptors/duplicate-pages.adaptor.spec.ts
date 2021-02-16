@@ -74,7 +74,7 @@ describe('DuplicatePagesAdaptors', () => {
     expect(adaptor).toBeTruthy();
   });
 
-  describe('getting all duplicate pages', () => {
+  describe('getting all duplicate page', () => {
     beforeEach(() => {
       adaptor.getAll();
     });
@@ -92,7 +92,7 @@ describe('DuplicatePagesAdaptors', () => {
         store.dispatch(new DuplicatePagesAllReceived({ pages: PAGES }));
       });
 
-      it('updates the list of pages', () => {
+      it('updates the list of page', () => {
         adaptor.pages$.subscribe(response => expect(response).toEqual(PAGES));
       });
 
@@ -104,7 +104,7 @@ describe('DuplicatePagesAdaptors', () => {
     });
   });
 
-  describe('selecting pages', () => {
+  describe('selecting page', () => {
     beforeEach(() => {
       adaptor.selectPages(PAGES);
     });
@@ -119,7 +119,7 @@ describe('DuplicatePagesAdaptors', () => {
       adaptor.selected$.subscribe(response => expect(response).toEqual(PAGES));
     });
 
-    describe('deselecting pages', () => {
+    describe('deselecting page', () => {
       const DESELECTED = PAGES[1];
 
       beforeEach(() => {
@@ -140,7 +140,7 @@ describe('DuplicatePagesAdaptors', () => {
     });
   });
 
-  describe('setting the blocking state for pages', () => {
+  describe('setting the blocking state for page', () => {
     beforeEach(() => {
       adaptor.setBlocking(PAGES, true);
     });
@@ -166,7 +166,7 @@ describe('DuplicatePagesAdaptors', () => {
         );
       });
 
-      it('updates the duplicate pages', () => {
+      it('updates the duplicate page', () => {
         adaptor.pages$.subscribe(response => expect(response).toEqual(PAGES));
       });
     });
@@ -184,7 +184,7 @@ describe('DuplicatePagesAdaptors', () => {
     });
   });
 
-  describe('setting the deleted state for duplicate pages', () => {
+  describe('setting the deleted state for duplicate page', () => {
     beforeEach(() => {
       adaptor.setDeleted(PAGES, true);
     });
@@ -204,7 +204,7 @@ describe('DuplicatePagesAdaptors', () => {
         store.dispatch(new DuplicatePagesDeletedSet({ pages: PAGES }));
       });
 
-      it('updates the duplicate pages', () => {
+      it('updates the duplicate page', () => {
         adaptor.pages$.subscribe(response => expect(response).toEqual(PAGES));
       });
 

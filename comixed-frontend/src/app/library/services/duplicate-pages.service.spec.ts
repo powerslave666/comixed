@@ -54,7 +54,7 @@ describe('DuplicatePagesService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('can get all duplicate pages', () => {
+  it('can get all duplicate page', () => {
     service.getAll().subscribe(response => expect(response).toEqual(PAGES));
 
     const req = httpMock.expectOne(interpolate(GET_ALL_DUPLICATE_PAGES_URL));
@@ -62,7 +62,7 @@ describe('DuplicatePagesService', () => {
     req.flush(PAGES);
   });
 
-  it('can set the blocking state for pages', () => {
+  it('can set the blocking state for page', () => {
     service
       .setBlocking(PAGES, true)
       .subscribe(response => expect(response).toEqual(PAGES));
@@ -76,7 +76,7 @@ describe('DuplicatePagesService', () => {
     req.flush(PAGES);
   });
 
-  it('can set the deleted state for pages', () => {
+  it('can set the deleted state for page', () => {
     service
       .setDeleted(PAGES, true)
       .subscribe(response => expect(response).toEqual(PAGES));

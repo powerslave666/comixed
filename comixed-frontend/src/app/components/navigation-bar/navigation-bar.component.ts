@@ -163,7 +163,7 @@ export class NavigationBarComponent implements OnInit {
           },
           {
             label: this.translateService.instant(
-              'main-menu.item.admin.duplicate-pages'
+              'main-menu.item.admin.duplicate-page'
             ),
             icon: 'fas fa-smog',
             routerLink: ['/duplicates'],

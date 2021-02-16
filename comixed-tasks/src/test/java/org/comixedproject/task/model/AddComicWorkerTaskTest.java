@@ -24,7 +24,7 @@ import org.comixedproject.adaptors.FilenameScraperAdaptor;
 import org.comixedproject.handlers.ComicFileHandler;
 import org.comixedproject.handlers.ComicFileHandlerException;
 import org.comixedproject.model.comic.Comic;
-import org.comixedproject.model.comic.Page;
+import org.comixedproject.model.page.Page;
 import org.comixedproject.model.tasks.Task;
 import org.comixedproject.service.comic.ComicService;
 import org.comixedproject.service.task.TaskService;

@@ -63,7 +63,7 @@ public class TaskRepositoryTest {
     assertEquals(TEST_FIRST_TASK_ID, task.getId().longValue());
     assertSame(TaskType.ADD_COMIC, task.getTaskType());
     assertEquals(TEST_ADD_COMIC_FILENAME, task.getProperty("filename"));
-    assertTrue(Boolean.valueOf(task.getProperty("delete-blocked-pages")));
+    assertTrue(Boolean.valueOf(task.getProperty("delete-blocked-page")));
     assertFalse(Boolean.valueOf(task.getProperty("ignore-metadata")));
   }
 }

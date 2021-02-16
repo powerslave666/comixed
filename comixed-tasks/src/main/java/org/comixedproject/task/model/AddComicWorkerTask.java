@@ -109,7 +109,7 @@ public class AddComicWorkerTask extends AbstractWorkerTask {
         .append("Add comic to library:")
         .append(" filename=")
         .append(this.filename)
-        .append(" delete blocked pages=")
+        .append(" delete blocked page=")
         .append(this.deleteBlockedPages ? "Yes" : "No")
         .append(" ignore metadata=")
         .append(this.ignoreMetadata ? "Yes" : "No");

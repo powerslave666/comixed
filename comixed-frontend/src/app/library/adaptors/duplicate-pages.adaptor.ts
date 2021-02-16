@@ -69,7 +69,7 @@ export class DuplicatePagesAdaptors {
   }
 
   getAll(): void {
-    this.logger.debug('getting all duplicate pages');
+    this.logger.debug('getting all duplicate page');
     this.store.dispatch(new DuplicatePagesGetAll());
   }
 
@@ -111,7 +111,7 @@ export class DuplicatePagesAdaptors {
 
   setDeleted(pages: DuplicatePage[], deleted: boolean): void {
     this.logger.debug(
-      'firing action to set duplicate pages deleted state:',
+      'firing action to set duplicate page deleted state:',
       pages,
       deleted
     );

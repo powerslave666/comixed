@@ -262,13 +262,13 @@ describe('ComicFileListToolbarComponent', () => {
     });
   });
 
-  it('can toggle blocked pages off', () => {
+  it('can toggle blocked page off', () => {
     component.deleteBlockedPages = true;
     component.toggleBlockedPages();
     expect(component.deleteBlockedPages).toBeFalsy();
   });
 
-  it('can toggle blocked pages on', () => {
+  it('can toggle blocked page on', () => {
     component.deleteBlockedPages = false;
     component.toggleBlockedPages();
     expect(component.deleteBlockedPages).toBeTruthy();

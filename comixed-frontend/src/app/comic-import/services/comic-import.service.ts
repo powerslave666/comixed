@@ -52,7 +52,7 @@ export class ComicImportService {
    *
    * @param comicFiles the comic files
    * @param ignoreMetadata the ignore metadata flag
-   * @param deleteBlockedPages the delete blocked pages flag
+   * @param deleteBlockedPages the delete blocked page flag
    */
   startImport(
     comicFiles: ComicFile[],

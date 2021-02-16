@@ -57,11 +57,11 @@ export class DuplicatePagesEffects {
             new DuplicatePagesAllReceived({ pages: response })
         ),
         catchError(error => {
-          this.logger.error('get all duplicate pages service failure:', error);
+          this.logger.error('get all duplicate page service failure:', error);
           this.messageService.add({
             severity: 'error',
             detail: this.translateService.instant(
-              'duplicate-pages-effects.get-all.error.detail'
+              'duplicate-page-effects.get-all.error.detail'
             )
           });
           return of(new DuplicatePagesGetAllFailed());
@@ -69,7 +69,7 @@ export class DuplicatePagesEffects {
       )
     ),
     catchError(error => {
-      this.logger.error('get all duplicate pages general failure:', error);
+      this.logger.error('get all duplicate page general failure:', error);
       this.messageService.add({
         severity: 'error',
         detail: this.translateService.instant(
@@ -92,7 +92,7 @@ export class DuplicatePagesEffects {
             this.messageService.add({
               severity: 'info',
               detail: this.translateService.instant(
-                'duplicate-pages-effects.set-blocking.success.detail',
+                'duplicate-page-effects.set-blocking.success.detail',
                 { blocked: action.blocking }
               )
             })
@@ -103,13 +103,13 @@ export class DuplicatePagesEffects {
           ),
           catchError(error => {
             this.logger.error(
-              'set blocking on duplicate pages service failure:',
+              'set blocking on duplicate page service failure:',
               error
             );
             this.messageService.add({
               severity: 'error',
               detail: this.translateService.instant(
-                'duplicate-pages-effects.set-blocking.error.detail'
+                'duplicate-page-effects.set-blocking.error.detail'
               )
             });
             return of(new DuplicatePagesSetBlockingFailed());
@@ -118,7 +118,7 @@ export class DuplicatePagesEffects {
     ),
     catchError(error => {
       this.logger.error(
-        'set blocking on duplicate pages general failure:',
+        'set blocking on duplicate page general failure:',
         error
       );
       this.messageService.add({
@@ -137,7 +137,7 @@ export class DuplicatePagesEffects {
     map(action => action.payload),
     tap(action =>
       this.logger.debug(
-        'effect: setting duplicate pages deleted state:',
+        'effect: setting duplicate page deleted state:',
         action
       )
     ),
@@ -145,7 +145,7 @@ export class DuplicatePagesEffects {
       this.duplicatePagesService.setDeleted(action.pages, action.deleted).pipe(
         tap(response =>
           this.logger.debug(
-            'set deleted on duplicate pages response:',
+            'set deleted on duplicate page response:',
             response
           )
         ),
@@ -153,7 +153,7 @@ export class DuplicatePagesEffects {
           this.messageService.add({
             severity: 'info',
             detail: this.translateService.instant(
-              'duplicate-pages-effects.set-deleted.success.detail',
+              'duplicate-page-effects.set-deleted.success.detail',
               { deleted: action.deleted }
             )
           })
@@ -164,13 +164,13 @@ export class DuplicatePagesEffects {
         ),
         catchError(error => {
           this.logger.error(
-            'general failure setting duplicate pages deleted state:',
+            'general failure setting duplicate page deleted state:',
             error
           );
           this.messageService.add({
             severity: 'error',
             detail: this.translateService.instant(
-              'duplicate-pages-effects.set-deleted.error.detail',
+              'duplicate-page-effects.set-deleted.error.detail',
               { deleted: action.deleted }
             )
           });
@@ -180,7 +180,7 @@ export class DuplicatePagesEffects {
     ),
     catchError(error => {
       this.logger.error(
-        'service failure setting duplicate pages deleted state:',
+        'service failure setting duplicate page deleted state:',
         error
       );
       this.messageService.add({

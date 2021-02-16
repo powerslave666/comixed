@@ -29,13 +29,13 @@
   <ng-template pTemplate="header">
     <tr>
       <th id="cx-page-number">##</th>
-      <th id="cx-page-thumbnail">{{ "comic-pages.table.header.thumbnail" | translate }}</th>
-      <th id="cx-page-filename">{{ "comic-pages.table.header.filename" | translate }}</th>
-      <th id="cx-page-page-type">{{ "comic-pages.table.header.page-type" | translate }}</th>
-      <th id="cx-page-hash">{{ "comic-pages.table.header.hash" | translate }}</th>
-      <th id="cx-page-dimensions">{{ "comic-pages.table.header.dimensions" | translate }}</th>
-      <th id="cx-page-blocked-status">{{ "comic-pages.table.header.blocked-status" | translate }}</th>
-      <th id="cx-page-deleted-status">{{ "comic-pages.table.header.deleted-status" | translate }}</th>
+      <th id="cx-page-thumbnail">{{ "comic-page.table.header.thumbnail" | translate }}</th>
+      <th id="cx-page-filename">{{ "comic-page.table.header.filename" | translate }}</th>
+      <th id="cx-page-page-type">{{ "comic-page.table.header.page-type" | translate }}</th>
+      <th id="cx-page-hash">{{ "comic-page.table.header.hash" | translate }}</th>
+      <th id="cx-page-dimensions">{{ "comic-page.table.header.dimensions" | translate }}</th>
+      <th id="cx-page-blocked-status">{{ "comic-page.table.header.blocked-status" | translate }}</th>
+      <th id="cx-page-deleted-status">{{ "comic-page.table.header.deleted-status" | translate }}</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body"
@@ -54,7 +54,7 @@
       <td class="cx-table-column-align-center">
         <p-inplace [disabled]="!isAdmin">
           <span pInplaceDisplay>
-            {{ "comic-pages.page-type." + page.page_type.name | translate }}
+            {{ "comic-page.page-type." + page.page_type.name | translate }}
           </span>
           <span pInplaceContent>
             <p-dropdown [options]="pageTypeOptions"
@@ -70,16 +70,16 @@
       <td class="cx-table-column-align-center">
         <span class="fa fa-fw fa-switch"
               (click)="page.blocked ? unblockPage(page) : blockPage(page)"
-              [pTooltip]="'comic-pages.tooltip.blocked'|translate:{blocked:page.blocked}">
-        {{"comic-pages.table.column.blocked-status"|translate: {blocked: page.blocked} }}
+              [pTooltip]="'comic-page.tooltip.blocked'|translate:{blocked:page.blocked}">
+        {{"comic-page.table.column.blocked-status"|translate: {blocked: page.blocked} }}
         </span>
       </td>
       <td class="cx-table-column-align-center">
         <span
           class="fa fa-fw fa-switch"
           (click)="page.deleted ? undeletePage(page) : deletePage(page)"
-          [pTooltip]="'comic-pages.tooltip.deleted'|translate:{deleted:page.deleted}">
-        {{"comic-pages.table.column.deleted-status"|translate: {deleted: page.deleted} }}
+          [pTooltip]="'comic-page.tooltip.deleted'|translate:{deleted:page.deleted}">
+        {{"comic-page.table.column.deleted-status"|translate: {deleted: page.deleted} }}
         </span>
       </td>
     </tr>

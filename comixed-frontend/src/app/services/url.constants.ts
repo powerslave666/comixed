@@ -37,18 +37,18 @@ export const COMIC_DELETE_URL = '${API_ROOT_URL}/comics/${id}';
 export const COMIC_SUMMARY_URL = '${API_ROOT_URL}/comics/${id}/summary';
 
 export const PAGE_TYPES_URL = `${API_ROOT_URL}/pages/types`;
-export const PAGE_TYPE_URL = '${API_ROOT_URL}/pages/${id}/type';
+export const PAGE_TYPE_URL = '${API_ROOT_URL}/page/${id}/type';
 export const DUPLICATE_PAGES_URL = `${API_ROOT_URL}/pages/duplicates`;
-export const DELETE_PAGE_URL = '${API_ROOT_URL}/pages/${id}';
-export const UNDELETE_PAGE_URL = '${API_ROOT_URL}/pages/${id}/undelete';
-export const DELETE_PAGES_WITH_HASH_URL = '${API_ROOT_URL}/pages/hash/${hash}';
+export const DELETE_PAGE_URL = '${API_ROOT_URL}/page/${id}';
+export const UNDELETE_PAGE_URL = '${API_ROOT_URL}/page/${id}/undelete';
+export const DELETE_PAGES_WITH_HASH_URL = '${API_ROOT_URL}/page/hash/${hash}';
 export const UNDELETE_PAGES_WITH_HASH_URL =
-  '${API_ROOT_URL}/pages/hash/${hash}';
+  '${API_ROOT_URL}/page/hash/${hash}';
 export const GET_COMIC_FILES_URL =
   '${API_ROOT_URL}/files/contents?directory=${directory}';
 export const ADD_BLOCKED_PAGE_HASH_URL = `${API_ROOT_URL}/pages/blocked`;
 export const DELETE_BLOCKED_PAGE_HASH_URL =
-  '${API_ROOT_URL}/pages/blocked/${hash}';
+  '${API_ROOT_URL}/page/blocked/${hash}';
 export const IMPORT_COMIC_FILES_URL = `${API_ROOT_URL}/files/import`;
 export const RESCAN_COMIC_FILES_URL = `${API_ROOT_URL}/comics/rescan`;
 export const GET_SCRAPING_CANDIDATES_URL = `${API_ROOT_URL}/scraper/query/volumes`;

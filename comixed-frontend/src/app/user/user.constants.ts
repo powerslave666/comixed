@@ -26,9 +26,9 @@ export const DELETE_USER_URL = `${API_ROOT_URL}/admin/users/\${id}`;
 export const USER_PREFERENCE_TARGET_ARCHIVE_TYPE =
   'user-preference.conversion-target-archive-type';
 export const USER_PREFERENCE_RENAME_PAGES_ON_CONVERT =
-  'user-preference.conversion-rename-pages';
+  'user-preference.conversion-rename-page';
 export const USER_PREFERENCE_DELETE_PAGES_ON_CONVERT =
-  'user-preference.conversion-delete-pages';
+  'user-preference.conversion-delete-page';
 export const USER_PREFERENCE_SKIP_CACHE = 'user-preference.skip-cache';
 export const USER_PREFERENCE_MAX_SCRAPING_RECORDS =
   'user-preference.max-scraping-records';

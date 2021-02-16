@@ -115,7 +115,7 @@ describe('DuplicatesPageToolbarComponent', () => {
     });
   });
 
-  describe('turn on blocked for selected pages', () => {
+  describe('turn on blocked for selected page', () => {
     beforeEach(() => {
       spyOn(confirmationService, 'confirm').and.callFake(
         (confirm: Confirmation) => confirm.accept()
@@ -133,7 +133,7 @@ describe('DuplicatesPageToolbarComponent', () => {
     });
   });
 
-  describe('turn off blocked for selected pages', () => {
+  describe('turn off blocked for selected page', () => {
     beforeEach(() => {
       spyOn(confirmationService, 'confirm').and.callFake(
         (confirm: Confirmation) => confirm.accept()

@@ -56,11 +56,11 @@ describe('DuplicatePages Reducer', () => {
       expect(state.fetchingAll).toBeFalsy();
     });
 
-    it('has an empty set of pages', () => {
+    it('has an empty set of page', () => {
       expect(state.pages).toEqual([]);
     });
 
-    it('has an empty select of selected pages', () => {
+    it('has an empty select of selected page', () => {
       expect(state.selected).toEqual([]);
     });
 
@@ -73,7 +73,7 @@ describe('DuplicatePages Reducer', () => {
     });
   });
 
-  describe('fetching the duplicate pages', () => {
+  describe('fetching the duplicate page', () => {
     beforeEach(() => {
       state = reducer(
         { ...state, fetchingAll: false },
@@ -86,7 +86,7 @@ describe('DuplicatePages Reducer', () => {
     });
   });
 
-  describe('receiving the duplicate pages', () => {
+  describe('receiving the duplicate page', () => {
     beforeEach(() => {
       state = reducer(
         { ...state, fetchingAll: true, pages: [] },
@@ -98,12 +98,12 @@ describe('DuplicatePages Reducer', () => {
       expect(state.fetchingAll).toBeFalsy();
     });
 
-    it('sets the pages', () => {
+    it('sets the page', () => {
       expect(state.pages).toEqual(PAGES);
     });
   });
 
-  describe('failing to get the duplicate pages', () => {
+  describe('failing to get the duplicate page', () => {
     beforeEach(() => {
       state = reducer(
         { ...state, fetchingAll: true },
@@ -116,7 +116,7 @@ describe('DuplicatePages Reducer', () => {
     });
   });
 
-  describe('selecting duplicate pages', () => {
+  describe('selecting duplicate page', () => {
     beforeEach(() => {
       state = reducer(
         { ...state, selected: [DUPLICATE_PAGE_1] },
@@ -124,12 +124,12 @@ describe('DuplicatePages Reducer', () => {
       );
     });
 
-    it('updates the selected pages', () => {
+    it('updates the selected page', () => {
       expect(state.selected).toEqual(PAGES);
     });
   });
 
-  describe('deselecting duplicate pages', () => {
+  describe('deselecting duplicate page', () => {
     const DESELECTIONS = [DUPLICATE_PAGE_2];
 
     beforeEach(() => {
@@ -139,16 +139,16 @@ describe('DuplicatePages Reducer', () => {
       );
     });
 
-    it('updates the selected pages', () => {
+    it('updates the selected page', () => {
       DESELECTIONS.forEach(page => expect(state.selected).not.toContain(page));
     });
 
-    it('does not remove other pages', () => {
+    it('does not remove other page', () => {
       expect(state.selected).not.toEqual([]);
     });
   });
 
-  describe('setting the blocked state on duplicate pages', () => {
+  describe('setting the blocked state on duplicate page', () => {
     beforeEach(() => {
       state = reducer(
         { ...state, setBlocking: false },
@@ -161,7 +161,7 @@ describe('DuplicatePages Reducer', () => {
     });
   });
 
-  describe('when the blocked state has been set for pages', () => {
+  describe('when the blocked state has been set for page', () => {
     beforeEach(() => {
       state = reducer(
         { ...state, setBlocking: true, pages: [] },
@@ -191,7 +191,7 @@ describe('DuplicatePages Reducer', () => {
     });
   });
 
-  describe('marking duplicate pages as deleted', () => {
+  describe('marking duplicate page as deleted', () => {
     beforeEach(() => {
       state = reducer(
         { ...state, setDeleted: false },
@@ -204,7 +204,7 @@ describe('DuplicatePages Reducer', () => {
     });
   });
 
-  describe('when the pages are marked as deleted', () => {
+  describe('when the page are marked as deleted', () => {
     const ORIGINAL = PAGES[0];
     const UPDATED = {
       ...ORIGINAL,
@@ -222,13 +222,13 @@ describe('DuplicatePages Reducer', () => {
       expect(state.setDeleted).toBeFalsy();
     });
 
-    it('merges the updated page into the list of duplicate pages', () => {
+    it('merges the updated page into the list of duplicate page', () => {
       expect(state.pages).toContain(UPDATED);
       expect(state.pages).not.toContain(ORIGINAL);
     });
   });
 
-  describe('when deleting duplicate pages fails', () => {
+  describe('when deleting duplicate page fails', () => {
     beforeEach(() => {
       state = reducer(
         { ...state, setDeleted: true },

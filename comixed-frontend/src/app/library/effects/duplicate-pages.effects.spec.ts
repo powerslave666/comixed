@@ -91,7 +91,7 @@ describe('DuplicatePagesEffects', () => {
     expect(effects).toBeTruthy();
   });
 
-  describe('getting all duplicate pages', () => {
+  describe('getting all duplicate page', () => {
     it('fires an action on success', () => {
       const serviceResponse = PAGES;
       const action = new DuplicatePagesGetAll();
@@ -134,7 +134,7 @@ describe('DuplicatePagesEffects', () => {
     });
   });
 
-  describe('setting the blocked state for duplicate pages', () => {
+  describe('setting the blocked state for duplicate page', () => {
     it('fires an action on success', () => {
       const serviceResponse = PAGES;
       const action = new DuplicatePagesSetBlocking({
@@ -191,7 +191,7 @@ describe('DuplicatePagesEffects', () => {
     });
   });
 
-  describe('setting the deleted state for duplicate pages', () => {
+  describe('setting the deleted state for duplicate page', () => {
     it('fires an action on success', () => {
       const serviceResponse = PAGES;
       const action = new DuplicatePagesSetDeleted({

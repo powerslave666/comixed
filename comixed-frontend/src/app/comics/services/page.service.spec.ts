@@ -85,7 +85,7 @@ describe('PageService', () => {
   });
 
   describe('setting page hash blocking', () => {
-    it('can block pages by hash', () => {
+    it('can block page by hash', () => {
       service
         .setPageHashBlocking(PAGE, true)
         .subscribe(response => expect(response).toEqual(COMIC));
@@ -101,7 +101,7 @@ describe('PageService', () => {
       req.flush(COMIC);
     });
 
-    it('can unblock pages by hash', () => {
+    it('can unblock page by hash', () => {
       service
         .setPageHashBlocking(PAGE, false)
         .subscribe(response => expect(response).toEqual(COMIC));
